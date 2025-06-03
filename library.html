@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Moment I Knew</title>
+  <style>
+    body {
+      background-color: #f0e6d2;
+      font-family: 'Times New Roman', serif;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px;
+      line-height: 1.6;
+    }
+    .book {
+      display: block;
+      background: #5a3921;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      cursor: pointer;
+      text-align: center;
+    }
+    .book:hover {
+      background: #3a2414;
+    }
+  </style>
+</head>
+<body>
+  <h2>The Moment I Knew</h2>
+  <p>
+    "Oh! Hello Jean, I was hoping you’d show up. The others will be coming soon. It’s great to finally see you in person. How are you?"
+  </p>
+  <p>Choose a book:</p>
+  <div class="book" onclick="openBook('calculus')">Calculus</div>
+  <div class="book" onclick="openBook('probability')">Probability</div>
+  <div class="book" onclick="openBook('combinatorics')">Combinatorics</div>
+  <div class="book" onclick="openBook('abstract-algebra')">Abstract Algebra</div>
+  <div class="book" onclick="openBook('topology')">Topology</div>
+  <div class="book" onclick="openBook('diff-eq')">Differential Equations</div>
+  <div class="book" onclick="openBook('linear-algebra')">Linear Algebra</div>
+  <div class="book" onclick="openBook('ml')">Machine Learning</div>
+  <div class="book" onclick="openBook('graph-theory')">Graph Theory</div>
+
+  <script>
+    function openBook(book) {
+      if (book === 'diff-eq') {
+        alert(`"I have never in my life laid eyes upon someone with a soul as pure as you. It feels gentle to wander along these streets—I could go on forever."\n\nWord: LOML`);
+      } else {
+        alert(`"You know Coney Island is very pretty around this time of year. Have you ever been?... Then we should head out now, the train is about to leave!"\n\nWord: Search`);
+      }
+    }
+  </script>
+</body>
+</html>
