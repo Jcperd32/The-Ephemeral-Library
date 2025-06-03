@@ -1,3 +1,14 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+  height: 100vh;
+  overflow: hidden;
+  color: #e8d5b5;
+}
+
+/* === Vault Entrance Page === */
 .start-page {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
               url('https://i.imgur.com/JQ7Y5yL.jpg');
@@ -5,24 +16,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  color: #e8d5b5;
-  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
 }
 
 .vault-door {
-  text-align: center;
-  border: 10px solid #5a3921;
+  border: 12px solid #5a3921;
   padding: 40px;
   background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 20px #8b5a2b;
+  box-shadow: 0 0 30px #8b5a2b;
+  max-width: 500px;
+}
+
+.vault-door h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.subtitle {
+  font-style: italic;
+  margin-bottom: 30px;
 }
 
 #unlock-btn {
   background: #8b5a2b;
-  color: #fff;
+  color: white;
   border: none;
-  padding: 12px 25px;
+  padding: 12px 30px;
   font-size: 1.2em;
   cursor: pointer;
   transition: all 0.3s;
@@ -33,21 +53,31 @@
   transform: scale(1.05);
 }
 
-/* Library Page - Autumn Theme */
+/* === Library Page === */
 .library-page {
   background: linear-gradient(rgba(30, 15, 0, 0.8), rgba(30, 15, 0, 0.8)), 
               url('https://i.imgur.com/X6Y9BmQ.jpg');
   background-size: cover;
-  color: #e8d5b5;
-  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .library-shelf {
-  max-width: 600px;
-  margin: 0 auto;
   background: rgba(20, 10, 0, 0.7);
-  padding: 30px;
-  border-left: 5px solid #8b5a2b;
+  padding: 40px;
+  border-left: 8px solid #8b5a2b;
+  max-width: 600px;
+}
+
+.library-shelf h2 {
+  font-size: 2.5em;
+  margin-top: 0;
+}
+
+.dialogue {
+  font-style: italic;
+  margin-bottom: 30px;
 }
 
 .book {
@@ -57,6 +87,7 @@
   margin: 10px 0;
   cursor: pointer;
   transition: all 0.3s;
+  text-align: center;
 }
 
 .book:hover {
@@ -64,6 +95,26 @@
   box-shadow: 0 0 10px #e8d5b5;
 }
 
+/* === Music Control === */
+#muteBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Falling Leaves === */
 .autumn-leaves {
   position: fixed;
   top: 0;
@@ -82,6 +133,10 @@
   animation: float 10s linear infinite;
 }
 
+@keyframes float {
+  0% { transform: translateY(-10vh) rotate(0deg); }
+  100% { transform: translateY(110vh) rotate(360deg); }
+}
 @keyframes float {
   0% { transform: translateY(-10vh) rotate(0deg); }
   100% { transform: translateY(110vh) rotate(360deg); }
