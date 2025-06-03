@@ -1,7 +1,6 @@
 function createLeaves() {
   const leavesContainer = document.querySelector('.autumn-leaves');
   if (!leavesContainer) return;
-
   for (let i = 0; i < 15; i++) {
     const leaf = document.createElement('div');
     leaf.className = 'leaf';
@@ -13,38 +12,28 @@ function createLeaves() {
     leavesContainer.appendChild(leaf);
   }
 }
-
-
 function setupMusic() {
   const bgMusic = document.getElementById('bgMusic');
   const muteBtn = document.getElementById('muteBtn');
-
   if (!bgMusic || !muteBtn) return;
-
   bgMusic.volume = 0.3;
   const playPromise = bgMusic.play();
-
   if (playPromise !== undefined) {
     playPromise.catch(error => {
       muteBtn.textContent = "🔇";
       bgMusic.muted = true;
     });
   }
-
-  // Mute toggle
   muteBtn.addEventListener('click', () => {
     bgMusic.muted = !bgMusic.muted;
     muteBtn.textContent = bgMusic.muted ? "🔇" : "🔊";
   });
 }
-
-
 if (document.getElementById('unlock-btn')) {
   document.getElementById('unlock-btn').addEventListener('click', () => {
     window.location.href = 'library.html';
   });
 }
-
 if (document.querySelectorAll('.book')) {
   document.querySelectorAll('.book').forEach(book => {
     book.addEventListener('click', () => {
@@ -56,7 +45,6 @@ if (document.querySelectorAll('.book')) {
     });
   });
 }
-
 document.addEventListener('DOMContentLoaded', () => {
   createLeaves();
   setupMusic();
