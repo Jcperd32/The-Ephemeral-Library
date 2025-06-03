@@ -1,33 +1,35 @@
-// Start Page
-if (document.getElementById('start-btn')) {
-  document.getElementById('start-btn').addEventListener('click', () => {
+if (document.getElementById('unlock-btn')) {
+  document.getElementById('unlock-btn').addEventListener('click', () => {
     window.location.href = 'library.html';
   });
 }
 
-// Library Page
+
 if (document.querySelectorAll('.book')) {
-  const books = document.querySelectorAll('.book');
-  books.forEach(book => {
+  document.querySelectorAll('.book').forEach(book => {
     book.addEventListener('click', () => {
       if (book.dataset.correct === 'true') {
-        alert("Correct passage...\nWord: LOML");
-        // window.location.href = 'next-riddle.html'; // Uncomment for more pages
+        alert("I have never in my life laid eyes upon someone with a soul as pure as you...\n\nWord: LOML");
       } else {
-        alert("This book feels empty...");
+        alert("You know Coney Island is very pretty around this time of year...\n\nWord: Search");
       }
     });
   });
 }
 
-// Add floating leaves
-for (let i = 0; i < 10; i++) {
-  const leaf = document.createElement('div');
-  leaf.className = 'leaf';
-  leaf.style.width = `${Math.random() * 30 + 20}px`;
-  leaf.style.height = `${Math.random() * 30 + 20}px`;
-  leaf.style.left = `${Math.random() * 100}vw`;
-  leaf.style.top = `${Math.random() * 100}vh`;
-  leaf.style.animationDuration = `${Math.random() * 10 + 10}s`;
-  document.body.appendChild(leaf);
+// Create Falling Leaves
+function createLeaves() {
+  const leavesContainer = document.querySelector('.autumn-leaves');
+  for (let i = 0; i < 15; i++) {
+    const leaf = document.createElement('div');
+    leaf.className = 'leaf';
+    leaf.style.left = `${Math.random() * 100}vw`;
+    leaf.style.width = `${Math.random() * 30 + 20}px`;
+    leaf.style.height = `${Math.random() * 30 + 20}px`;
+    leaf.style.animationDuration = `${Math.random() * 10 + 5}s`;
+    leaf.style.animationDelay = `${Math.random() * 5}s`;
+    leavesContainer.appendChild(leaf);
+  }
 }
+
+createLeaves();
