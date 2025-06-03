@@ -5,13 +5,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="library-page">
+  <audio id="bgMusic" loop autoplay>
+    <source src="library_music.mp3" type="audio/mp3">
+  </audio>
+  <button id="muteBtn">🔊</button>
+  
   <div class="library-shelf">
     <h2>The Moment I Knew</h2>
     <p class="dialogue">"Oh! Hello Jean, I was hoping you’d show up..."</p>
     <div class="book" data-correct="false">Calculus</div>
     <div class="book" data-correct="false">Probability</div>
     <div class="book" data-correct="true">Differential Equations</div>
-    <!-- More books... -->
+    
   </div>
   <div class="autumn-leaves"></div>
   <script src="script.js"></script>
