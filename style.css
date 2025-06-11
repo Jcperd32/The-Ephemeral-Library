@@ -7,7 +7,7 @@ body {
   color: #e8d5b5;
 }
 .start-page {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i.imgur.com/JQ7Y5yL.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://www.elitetreecare.com/wp-content/uploads/2019/10/autum-leaves.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -44,7 +44,7 @@ body {
   transform: scale(1.05);
 }
 .library-page {
-  background: linear-gradient(rgba(30, 15, 0, 0.8), rgba(30, 15, 0, 0.8)), url('https://i.imgur.com/X6Y9BmQ.jpg');
+  background: linear-gradient(rgba(30, 15, 0, 0.8), rgba(30, 15, 0, 0.8)), url('https://tse2.mm.bing.net/th?id=OIP.rf4r4AzaRQ0NHEkxLVBlqQHaE8&pid=Api&P=0&h=220');
   background-size: cover;
   display: flex;
   justify-content: center;
